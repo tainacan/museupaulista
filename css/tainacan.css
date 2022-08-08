@@ -1,0 +1,231 @@
+/* Item list pages */
+.tainacan-collection-header {
+    --tainacan-background-color: rgba(255, 255, 255, 0.55);
+    background-color: var(--paletteColor6, #ffffff);
+    position: relative;
+    margin-bottom: 3rem;
+    --boxShadow: none;
+}
+.tainacan-collection-header__box {
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--container-width);
+    max-width: var(--normal-container-max-width);
+    padding: 20px 0px !important;
+}
+.tainacan-collection-header .ct-breadcrumbs {
+    position: absolute;
+    top: calc(-1 * var(--content-vertical-spacing) + 6px) !important;
+    font-size: 14px;
+    --linkInitialColor: var(--paletteColor4, #000000);
+    color: var(--paletteColor4, #000000);
+    opacity: 0.75;
+}
+.tainacan-collection-header .museupaulista-header-elements {
+   top: calc(-1 * var(--content-vertical-spacing) + 6px);
+}
+.tainacan-collection-header .page-title {
+    font-size: 48px;
+}
+.tainacan-collection-header .page-description {
+    color: var(--paletteColor4, #000000) !important;
+}
+
+.tainacan-collection-header.tainacan-collection-header--term-page {
+    background-color: var(--paletteColor6, #ffffff);
+}
+.tainacan-collection-header.tainacan-collection-header--term-page .ct-breadcrumbs {
+    color: var(--paletteColor3, #000000);
+    --linkInitialColor: var(--paletteColor3, #000000);
+    opacity: 0.75;
+}
+
+.tainacan-collection-header.tainacan-collection-header--term-page .collection-thumbnail {
+    --thumbnail-size: 406px;
+    --borderRadius: 8px;
+    margin-right: 30px;
+}
+.tainacan-collection-header.tainacan-collection-header--term-page .page-title {
+    color: var(--paletteColor1, #F57832) !important; 
+}
+.tainacan-collection-header.tainacan-collection-header--term-page .page-description {
+    color: var(--paletteColor3, #000000) !important;
+}
+
+/* The items list component */
+.tainacan-modal,
+.theme-items-list {
+    --boxShadow: none;
+    --borderRadius: 0px;
+    --tainacan-primary: rgba(196, 84, 78, 0.3);
+}
+.theme-items-list:not(.is-fullscreen) {
+    top: 0rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--container-width) !important;
+    max-width: var(--normal-container-max-width) !important;
+    min-width: initial !important;
+    --boxShadow: none;
+}
+.theme-items-list .search-control {
+    padding: 20px 0px 6px 3px !important;
+    background-color: transparent !important;
+}
+.tainacan-modal .tags,
+.theme-items-list .tags {
+    border-radius: 8px !important;
+}
+.tainacan-modal .filter-item-forms .collapse-trigger,
+.theme-items-list .filter-item-forms .collapse-trigger {
+    margin-left: 0;
+    border-bottom: 1px solid #dddddd;
+}
+.tainacan-modal .filter-item-forms .collapse-trigger .collapse-label,
+.theme-items-list .filter-item-forms .collapse-trigger .collapse-label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--tainacan-secondary, #F57832);
+}
+.tainacan-modal .filter-item-forms .collapse-trigger .icon,
+.theme-items-list .filter-item-forms .collapse-trigger .icon,
+.tainacan-modal #filters-items-list .collapse-all .icon,
+.theme-items-list #filters-items-list .collapse-all .icon {
+    margin-right: 0;
+    margin-left: 4px;
+    order: 2;
+}
+.theme-items-list #filters-items-list .collapse-all {
+    margin-bottom: 0.75rem;
+}
+.tainacan-modal .filter-item-forms .collapse-trigger .icon .tainacan-icon-arrowright::before,
+.theme-items-list .filter-item-forms .collapse-trigger .icon .tainacan-icon-arrowright::before,
+.tainacan-modal #filters-items-list .collapse-all .icon .tainacan-icon-arrowright::before,
+.theme-items-list #filters-items-list .collapse-all .icon .tainacan-icon-arrowright::before {
+    content: "plus";
+}
+.tainacan-modal .filter-item-forms .collapse-trigger .icon .tainacan-icon-arrowdown::before,
+.theme-items-list .filter-item-forms .collapse-trigger .icon .tainacan-icon-arrowdown::before,
+.tainacan-modal #filters-items-list .collapse-all .icon .tainacan-icon-arrowdown::before,
+.theme-items-list #filters-items-list .collapse-all .icon .tainacan-icon-arrowdown::before {
+    content: "minus";
+}
+.theme-items-list #filters-modal .modal-content #filters-items-list .filters-components-list .colleciton-name {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.tainacan-modal .tainacan-form .label,
+.theme-items-list .tainacan-form .label,
+.tainacan-modal .tainacan-form .collapse-all,
+.theme-items-list .tainacan-form .collapse-all {
+    display: inline-flex !important;
+    margin-left: 0 !important;
+    width: 100%;
+    justify-content: space-between;
+}
+.tainacan-modal .tainacan-form .collapse-all,
+.theme-items-list .tainacan-form .collapse-all,
+.tainacan-modal .tainacan-form .collapse-all .icon .tainacan-icon::before,
+.theme-items-list .tainacan-form .collapse-all  .icon .tainacan-icon::before {
+    color: var(--palette-color-1, #cd403c) !important;
+}
+.filter-tags-list #button-clear-all {
+    position: absolute;
+    right: 0;
+    border: 1px solid var(--palette-color-1, #cd403c);
+    border-radius: 8px;
+    padding: 5px 16px;
+    margin-top: -1rem;
+}
+.filter-tags-list {
+    padding-right: 100px;
+}
+.filter-tags-list .filter-tag {
+    margin-bottom: 1px !important;
+    background: transparent;
+}
+.page.has-filters-panel-style-boxed #filters-modal .modal-content #filters-items-list {
+    background-color: var(--tainacan-background-color, #ffffff);
+}
+.theme-items-list #filters-modal .modal-content #filters-items-list {
+    margin: 0px;
+}
+#filters-label-landmark {
+    font-size: 24px !important;
+}
+.tainacan-modal .tainacan-modal-content,
+.theme-items-list .tainacan-modal-content {
+    padding: 40px var(--tainacan-one-column, 4.166666667%);
+}
+.theme-items-list .search-control .search-control-item .search-area input {
+    padding: 10px 16px;
+    border-radius: 4px !important;
+    overflow: hide;
+    margin-top: -3px;
+}
+.theme-items-list .search-control .search-control-item .search-area .icon i {
+    font-size: 1rem;
+    margin-top: -4px;
+}
+.theme-items-list #items-list-area #items-list-results .tainacan-masonry-container .tainacan-masonry-item {
+    flex-direction: column !important;
+}
+.theme-items-list #items-list-area #items-list-results .tainacan-cards-container .tainacan-card .metadata-title p,
+.theme-items-list #items-list-area #items-list-results .tainacan-list-container .tainacan-list .metadata-title p,
+.theme-items-list #items-list-area #items-list-results .tainacan-masonry-container .tainacan-masonry-item .metadata-title p,
+.theme-items-list #items-list-area #items-list-results .tainacan-records-container .tainacan-record .metadata-title p {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .filters-menu:not(.filters-menu-modal) {
+        z-index: 99999000;
+    }
+    .filter-tags-list #button-clear-all {
+        margin-top: 0;
+    }
+    .filter-tags-list {
+        padding-right: var(--tainacan-one-column);
+    }
+}
+@media screen and (min-width: 960px) {
+    .theme-items-list #filters-modal .modal-content #filters-items-list {
+        padding-left: 0;
+        padding-top: 0;
+    }
+    .theme-items-list #filters-modal .modal-content {
+        padding: 16px 6px !important;
+    }
+}
+
+/* Single items page has less space between columns */
+.tainacan-item-single-page .tainacan-item-single .tainacan-item-section__metadata {
+    -moz-column-gap: 2rem !important;
+    -webkit-column-gap: 2rem !important;
+    column-gap: 2rem !important;
+}
+.tainacan-item-single-page .hero-section {
+    padding-left: 64px;
+}
+
+.tainacan-metadata-label {
+    --fontStyle: normal;
+    --fontWeight: 500;
+}
+
+/* Single item navigation link */
+.item-navigation-source-link {
+    text-align: center;
+    margin-top: calc(-1 * var(--content-vertical-spacing));
+    margin-bottom: var(--content-vertical-spacing);
+}
+
+/* Tainacan media component */
+.tainacan-item-single-page .tainacan-media-component {
+    --tainacan-media-background: var(--palette-color-6, #ffffff);
+}
+.tainacan-media-component__swiper-main .swiper-slide-content a:first-of-type,
+.tainacan-media-component__swiper-main .swiper-slide-content p:first-of-type {
+    padding-top: 0;
+    padding-bottom: 0;
+}

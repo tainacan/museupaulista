@@ -1,0 +1,10 @@
+:root {
+    --palette-color-1: var(--paletteColor1, #F57832);
+    --palette-color-2: var(--paletteColor2, #BE4B28);
+    --palette-color-3: var(--paletteColor3, #000000);
+    --palette-color-4: var(--paletteColor4, #000000);
+    --palette-color-5: var(--paletteColor5, #000000);
+    --palette-color-6: var(--paletteColor6, #ffffff);
+    --palette-color-7: var(--paletteColor7, #ffffff);
+    --palette-color-8: var(--paletteColor8, #ffffff);
+}

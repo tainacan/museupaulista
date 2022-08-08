@@ -1,0 +1,187 @@
+/* Page title on editor side */
+.editor-post-title__block .editor-post-title__input {
+    font-family: Arial, Sans-Serif !important;
+    font-size: 64px;
+}
+
+.wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-container a > span,
+.wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-container a:hover > span,
+.wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-container a > span,
+.wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-container a:hover > span {
+    font-size: 22px;
+    color: var(--paletteColor1, #F57832);
+}
+
+/* Facet block is used for rounded images without title */
+.wp-block-tainacan-facets-list .facets-layout-grid .facet-list-item .facet-label-and-count {
+    align-items: center !important;
+}
+.wp-block-tainacan-facets-list .facets-layout-grid .facet-list-item .facet-label-and-count span:not(.facet-item-count) {
+    display: none;
+}
+
+/* Home banner logo */
+.wp-block-getwid-section .wp-block-group__inner-container svg {
+    margin-bottom: -4rem !important;
+    display: block;
+}
+
+/* Inner content of cover blocks should be 100% even with the positioning set to custom */
+.wp-block-cover-image.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container,
+.wp-block-cover.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container {
+    width: 100%;
+}
+
+/* Museu Paulista institution cards (also home page) */
+.wp-block-columns.museupaulista-institution-cards .wp-block-cover__inner-container {
+    width: 100% !important;
+}
+.wp-block-columns.museupaulista-institution-cards .wp-block-cover__inner-container .wp-block-columns {
+    margin: 0;
+    width: 100%;
+}
+.wp-block-columns.museupaulista-institution-cards .wp-block-cover__inner-container .wp-block-columns>.wp-block-column:not(:first-child) {
+    margin-left: 0.75em;
+}
+.wp-block-columns.museupaulista-institution-cards .wp-block-cover__inner-container .wp-block-columns>.wp-block-column p {
+    margin-bottom: 0;
+}
+
+/* Facets block inside a cover block should inherit text color */
+.wp-block-cover .wp-block-tainacan-facets-list ul.facets-list.facets-layout-list li.facet-list-item a,
+.wp-block-cover .wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list li.facet-list-item a {
+    color: inherit !important;
+}
+
+/* Title inside the blocks should not have margin */
+.wp-block-cover h1,
+.wp-block-cover h2,
+.wp-block-cover h3,
+.wp-block-cover h4,
+.wp-block-cover h5,
+.wp-block-cover h6,
+.wp-block-cover .wp-block-tainacan-facets-list,
+.wp-block-cover .wp-block-tainacan-dynamic-items-list,
+.wp-block-button {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Outline button should have white border */
+div.is-style-outline > .wp-block-button__link {
+    border-color: white;
+}
+
+/* WordPress core Search Bar with Basiliana style */
+.wp-block-search.is-style-museupaulista-search-bar .wp-block-search__inside-wrapper {
+    border-radius: 8px;
+    padding: 0;
+    border: none;
+}
+.wp-block-search.is-style-museupaulista-search-bar .wp-block-search__inside-wrapper .wp-block-search__input {
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid var(--paletteColor3, #000000);
+    padding: 0 0 0 2.25em;
+    min-height: 48px;
+    margin-right: -3px;
+}
+.wp-block-search.is-style-museupaulista-search-bar .wp-block-search__inside-wrapper .wp-block-search__button {
+    margin-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+    background-color: var(--paletteColor1, #F57832);
+    color: white;
+    padding: .125em 5.9375em;
+}
+
+/* Cover images carousel with figcaption layer to darken it */
+.wp-block-getwid-images-slider.has-captions .wp-block-getwid-images-slider__item figcaption {
+    display: flex !important;
+    align-items: flex-end;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: none; /*rgba(34,34,34,0.5); */
+    background-image: none;
+    padding: 20px;
+    height: 100%;
+}
+
+/* The posts and images gap should have more space to the arrows */
+.wp-block-getwid-post-carousel.has-slides-gap-large .slick-list,
+.wp-block-getwid-images-slider.has-slides-gap-large .slick-list {
+    margin: 0;
+}
+
+/* Museu Paulista Facets Section */
+.wp-block-getwid-section.museupaulista-facets-section hr {
+    margin-top: -18px;
+    height: 1px;
+}
+.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list {
+    margin: 0em auto 2em auto;
+}
+.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list .facets-list {    
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list ul.facets-list.facets-layout-list li.facet-list-item .facet-label-and-count span:first-child,
+.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list li.facet-list-item .facet-label-and-count span:first-child {
+    font-weight: bold;
+    color: var(--paletteColor1, #F57832);
+}
+
+/* Museu Paulista institution Pattern */
+.is-museupaulista-institution-cover {
+    margin-bottom: -4rem !important;
+}
+.is-museupaulista-institution-logo {
+    border: 2px solid white !important;
+}
+.is-museupaulista-institution-group h1 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.is-museupaulista-institution-group h2 {
+    margin-top: 0 !important;
+}
+.is-museupaulista-institution-group hr {
+    height: 1px !important;
+    background-color: #dddddd !important;
+}
+
+/* When displaying image as an item, the caption should be different */
+.wp-block-image.is-style-museupaulista-item-image figcaption {
+    text-align: left;
+    --fontSize: 1rem;
+}
+
+/* Slick carousel arrows should be accent color */
+.wp-block-getwid-images-slider .slick-prev::before,
+.wp-block-getwid-images-slider .slick-next::before,
+.wp-block-getwid-media-text-slider .slick-prev::before,
+.wp-block-getwid-media-text-slider .slick-next::before,
+.wp-block-getwid-post-slider .slick-prev::before,
+.wp-block-getwid-post-slider .slick-next::before,
+.wp-block-getwid-post-carousel .slick-prev::before,
+.wp-block-getwid-post-carousel .slick-next::before {
+    color: var(--paletteColor1, #F57832);
+}
+
+/* Default outlined buttons should be really outline */
+.is-style-outline:hover > .wp-block-button__link,
+.wp-block-button__link.is-style-outline:hover {
+    background-color: transparent !important;
+}
+
+/* Blocksy shortcode */
+.ct-posts-shortcode {
+    background-color: transparent !important;
+}
+[data-archive="default"][data-cards="cover"] .entry-card.instituicoes .entry-title {
+    margin-bottom: 0px;
+}
