@@ -23,6 +23,15 @@ if ( function_exists('register_block_style') ) {
         );
 
         register_block_style(
+            'core/heading',
+            array(
+                'name'  => 'museupaulista-text-shadow',
+                'label' =>  __('Texto com Sombra Museu Paulista', 'museupaulista'),
+                'isDefault' => false,
+            )
+        );
+
+        register_block_style(
             'core/search',
             array(
                 'name'  => 'museupaulista-search-bar',

@@ -4,6 +4,16 @@
 	--background-color: #ffffff;
 }
 
+/* Line above header in some pages */
+#main>.ct-container:not(.ct-container-full) {
+    border-top: 6px solid var(--paletteColor5);
+}
+
+/* Archive pages have less top padding */
+.archive .ct-container[data-vertical-spacing="top:bottom"] .hero-section  {
+    margin-top: -40px;
+}
+
 /* Hides swiper lazy loading */
 .swiper-lazy-preloader {
     animation: none;
@@ -83,16 +93,16 @@
     cursor: pointer;
 }
 .museupaulista-header-elements .museupaulista-header-button:first-child {
-    top: 6px;
+    top: 24px;
 }
 .museupaulista-header-elements .museupaulista-header-button:last-child {
-    top: calc( var(--content-vertical-spacing) + 8px);
+    top: calc( var(--content-vertical-spacing) + 30px);
 }
 [data-vertical-spacing*="top"] .museupaulista-header-elements .museupaulista-header-button:first-child {
-    top: calc((-1 * var(--content-vertical-spacing)) + 6px);
+    top: calc((-1 * var(--content-vertical-spacing)) + 24px);
 }
 [data-vertical-spacing*="top"] .museupaulista-header-elements .museupaulista-header-button:last-child {
-    top: 8px;
+    top: 30px;
 }
 .museupaulista-header-elements .museupaulista-header-button::hover,
 .museupaulista-header-elements .museupaulista-header-button::focus {

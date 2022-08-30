@@ -72,7 +72,7 @@ div.is-style-outline > .wp-block-button__link {
     border-color: white;
 }
 
-/* WordPress core Search Bar with Basiliana style */
+/* WordPress core Search Bar with Museu Paulista style */
 .wp-block-search.is-style-museupaulista-search-bar .wp-block-search__inside-wrapper {
     border-radius: 8px;
     padding: 0;
@@ -109,6 +109,10 @@ div.is-style-outline > .wp-block-button__link {
     background-image: none;
     padding: 20px;
     height: 100%;
+}
+
+.museupaulista-text-shadow {
+    text-shadow: -2px 2px 1px var(--paletteColor3, #111111); 
 }
 
 /* The posts and images gap should have more space to the arrows */
@@ -184,4 +188,9 @@ div.is-style-outline > .wp-block-button__link {
 }
 [data-archive="default"][data-cards="cover"] .entry-card.instituicoes .entry-title {
     margin-bottom: 0px;
+}
+
+/* Text shadow on curadoria cards */
+.entry-card.curadorias .entry-title {
+    text-shadow: 0px 2px 1px var(--paletteColor5, #000000);
 }
