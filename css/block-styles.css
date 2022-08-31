@@ -202,3 +202,20 @@ div.is-style-outline > .wp-block-button__link {
 .wp-block-separator:not(.is-style-dots) {
     height: 4px !important;
 }
+
+/* Columns block where a column expands its background outside of itself */
+.is-style-museupaulista-background-to-left.wp-block-column {
+    position: relative;
+}
+.is-style-museupaulista-background-to-left.wp-block-column::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: 99999;
+    width: 200%;
+    height: 100%;
+    right: 0;
+    left: -200%;
+    top: 0;
+    bottom: 0;
+}

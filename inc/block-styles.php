@@ -40,6 +40,15 @@ if ( function_exists('register_block_style') ) {
             )
         );
 
+        register_block_style(
+            'core/column',
+            array(
+                'name'  => 'museupaulista-background-to-left',
+                'label' =>  __('Expandido para esquerda Museu Paulista', 'museupaulista'),
+                'isDefault' => true,
+            )
+        );
+
     }
     add_action('init', 'museupaulista_block_styles');
 }
