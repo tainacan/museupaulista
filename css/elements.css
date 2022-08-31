@@ -10,7 +10,8 @@
 }
 
 /* Archive pages have less top padding */
-.archive .ct-container[data-vertical-spacing="top:bottom"] .hero-section  {
+.archive .ct-container[data-vertical-spacing="top:bottom"] .hero-section,
+.blog .ct-container[data-vertical-spacing="top:bottom"] .hero-section  {
     margin-top: -40px;
 }
 

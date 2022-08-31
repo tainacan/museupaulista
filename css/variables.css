@@ -1,4 +1,5 @@
 :root {
+    /* Blocksy default color palette */
     --palette-color-1: var(--paletteColor1, #F57832);
     --palette-color-2: var(--paletteColor2, #BE4B28);
     --palette-color-3: var(--paletteColor3, #000000);
@@ -7,4 +8,118 @@
     --palette-color-6: var(--paletteColor6, #ffffff);
     --palette-color-7: var(--paletteColor7, #ffffff);
     --palette-color-8: var(--paletteColor8, #ffffff);
+
+    /* Our custom new colors */
+    --palette-color-9: var(--paletteColor9, #ffd791);
+    --palette-color-10: var(--paletteColor10, #f5b914);
+    --palette-color-11: var(--paletteColor11, #eb1e23);
+    --palette-color-12: var(--paletteColor12, #f5a09b);
+    --palette-color-13: var(--paletteColor13, #f04164);
+    --palette-color-14: var(--paletteColor14, #e1af96);
+    --palette-color-15: var(--paletteColor15, #a50d2c);
+    --palette-color-16: var(--paletteColor16, #14877d);
+    --palette-color-17: var(--paletteColor17, #82c8be);
+    --palette-color-18: var(--paletteColor18, #0d5952);
+    --palette-color-19: var(--paletteColor19, #333333);
+    --palette-color-20: var(--paletteColor20, #f5f5f5);
+    --palette-color-21: var(--paletteColor21, #e6e6e6);
+    --palette-color-22: var(--paletteColor22, #666666);
+}
+
+.has-palette-color-9-color {
+    color: var(--palette-color-9, #ffd791);
+}
+.has-palette-color-9-background-color {
+    background-color: var(--palette-color-9, #ffd791);
+}
+
+.has-palette-color-10-color {
+    color: var(--palette-color-10, #f5b914);
+}
+.has-palette-color-10-background-color {
+    background-color: var(--palette-color-10, #f5b914);
+}
+
+.has-palette-color-11-color {
+    color: var(--palette-color-11, #eb1e23);
+}
+.has-palette-color-11-background-color {
+    background-color: var(--palette-color-11, #eb1e23);
+}
+
+.has-palette-color-12-color {
+    color: var(--palette-color-12, #f5a09b);
+}
+.has-palette-color-12-background-color {
+    background-color: var(--palette-color-12, #f5a09b);
+}
+
+.has-palette-color-13-color {
+    color: var(--palette-color-13, #f04164);
+}
+.has-palette-color-13-background-color {
+    background-color: var(--palette-color-13, #f04164);
+}
+
+.has-palette-color-14-color {
+    color: var(--palette-color-14, #e1af96);
+}
+.has-palette-color-14-background-color {
+    background-color: var(--palette-color-14, #e1af96);
+}
+
+.has-palette-color-15-color {
+    color: var(--palette-color-15, #a50d2c);
+}
+.has-palette-color-15-background-color {
+    background-color: var(--palette-color-15, #a50d2c);
+}
+
+.has-palette-color-16-color {
+    color: var(--palette-color-16, #14877d);
+}
+.has-palette-color-16-background-color {
+    background-color: var(--palette-color-16, #14877d);
+}
+
+.has-palette-color-17-color {
+    color: var(--palette-color-17, #82c8be);
+}
+.has-palette-color-17-background-color {
+    background-color: var(--palette-color-17, #82c8be);
+}
+
+.has-palette-color-18-color {
+    color: var(--palette-color-18, #0d5952);
+}
+.has-palette-color-18-background-color {
+    background-color: var(--palette-color-18, #0d5952);
+}
+
+.has-palette-color-19-color {
+    color: var(--palette-color-19, #333333);
+}
+.has-palette-color-19-background-color {
+    background-color: var(--palette-color-19, #333333);
+}
+
+.has-palette-color-20-color {
+    color: var(--palette-color-20, #f5f5f5);
+}
+.has-palette-color-20-background-color {
+    background-color: var(--palette-color-20, #f5f5f5);
+}
+
+.has-palette-color-21-color {
+    color: var(--palette-color-21, #e6e6e6);
+}
+.has-palette-color-21-background-color {
+    background-color: var(--palette-color-21, #e6e6e6);
+}
+
+.has-palette-color-22-color {
+    color: var(--palette-color-22, #666666);
+}
+.has-palette-color-22-background-color {
+    background-color: var(--palette-color-22, #666666);
 }

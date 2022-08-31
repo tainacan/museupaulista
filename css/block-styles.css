@@ -111,7 +111,7 @@ div.is-style-outline > .wp-block-button__link {
     height: 100%;
 }
 
-.museupaulista-text-shadow {
+.is-style-museupaulista-text-shadow {
     text-shadow: -2px 2px 1px var(--paletteColor3, #111111); 
 }
 
@@ -193,4 +193,12 @@ div.is-style-outline > .wp-block-button__link {
 /* Text shadow on curadoria cards */
 .entry-card.curadorias .entry-title {
     text-shadow: 0px 2px 1px var(--paletteColor5, #000000);
+}
+
+/* Separator Block Tweaks */
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+    --block-max-width: 398px !important;
+}
+.wp-block-separator:not(.is-style-dots) {
+    height: 4px !important;
 }

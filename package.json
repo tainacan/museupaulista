@@ -1,6 +1,6 @@
 {
   "name": "museupaulista",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": " Museu Paulista - a child theme of Blocksy",
   "main": "index.js",
   "scripts": {

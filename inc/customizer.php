@@ -89,7 +89,7 @@ function museupaulista_filter_palette( $args ) {
 			'color' => 'var(--paletteColor17, #82c8be)'
 		),
 		array(
-			'name' => 'Cor de Acero Escura Museu Paulista',
+			'name' => 'Cor de Acerto Escura Museu Paulista',
 			'slug' => 'palette-color-18',
 			'color' => 'var(--paletteColor14, #0d5952)'
 		),
