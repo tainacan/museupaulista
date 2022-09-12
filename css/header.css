@@ -1,22 +1,28 @@
-header .ct-header-search.ct-toggle {
+.ct-header [data-id="logo"] {
+    --margin: 1rem;
+}
+
+.ct-header .ct-header-search.ct-toggle {
     position: absolute;
     top: 10px;
-    left: 10px;
-    padding: 0px !important;
+    right: 10px;
+    padding: 10px !important;
     border-radius: 30px !important;
     border: 1px solid var(--paletteColor1, #F57832) !important;
 }
 
-header nav ul.menu {
+.ct-header nav ul.menu {
     height: 72px;
     border-top: 6px solid  var(--paletteColor3, #000000);
     border-bottom: 1px solid var(--paletteColor1, #F57832);
 }
 
-header nav ul.menu .ct-menu-link {
+.ct-header nav ul.menu .ct-menu-link {
     height: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
 }
 
-header nav ul.menu>li:not(:first-child) .ct-menu-link {
+.ct-header nav ul.menu>li:not(:first-child) .ct-menu-link {
     border-left: 1px solid var(--paletteColor21, #e6e6e6);
 }
