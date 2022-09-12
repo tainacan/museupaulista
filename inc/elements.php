@@ -3,9 +3,9 @@
 /**
  * Adds action to insert share and back buttons on headers
  */
-function museupaulista_add_share_and_back_buttons() {
+function museupaulista_add_share_and_back_buttons($type) {
     ?>
-    <div class="museupaulista-header-elements">
+    <div class="museupaulista-header-elements <?php  echo 'header-hero-type--' . $type; ?>">
         <button class="museupaulista-header-button museupaulista-header-button--back" onclick="event.preventDefault(); window && window.history && window.history ? window.history.back() : null">
             <span class="icon is-medium">
                 <i class="dashicons dashicons-arrow-left-alt"></i>

@@ -136,8 +136,32 @@
     line-height: 1.875rem;
     width: 1.75rem;
 }
-.single-post .museupaulista-header-elements {
-    top: 582px;
+
+/* White color for image backgrounds */
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button {
+    border: 1px solid var(--palette-color-6, #ffffff);
+}
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button::hover,
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button::focus {
+    border: 1px solid var(--palette-color-6, #ffffff);
+}
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button .icon i::before {
+    color: var(--palette-color-6, #ffffff);
+}
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button .icon i::after {
+    background-color: var(--palette-color-6, #ffffff);
+}
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button:hover .icon i::before {
+    color: var(--palette-color-6, #ffffff);
+}
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button:hover .icon i::after {
+    background-color: var(--palette-color-6, #ffffff);
+}
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button:focus .icon i::before {
+    color: var(--palette-color-6, #ffffff);
+}
+.header-hero-type--type-2.museupaulista-header-elements .museupaulista-header-button:focus .icon i::after {
+    background-color: var(--palette-color-6, #ffffff);
 }
 
 /* Museu Paulista Social Icons share list */
@@ -174,7 +198,7 @@
 }
 
 /* Single post header for curadorias */
-body.single-post .hero-section .page-description {
+body.single-curadorias .hero-section .page-description {
     max-width: 624px;
 }
 

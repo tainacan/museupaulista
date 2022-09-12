@@ -1,5 +1,9 @@
-.ct-header [data-id="logo"] {
-    --margin: 1rem;
+#header [data-items] {
+    position: relative;
+}
+
+[data-header*="type-1"] .ct-header [data-id="logo"].site-branding {
+    --margin: 1rem 0px 2.25rem 0px !important;
 }
 
 .ct-header .ct-header-search.ct-toggle {
@@ -19,8 +23,8 @@
 
 .ct-header nav ul.menu .ct-menu-link {
     height: auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
 }
 
 .ct-header nav ul.menu>li:not(:first-child) .ct-menu-link {
