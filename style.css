@@ -22,6 +22,9 @@
 /* Logo animation */
 @import "./css/logo.css";
 
+/* Updates to the footer widgets */
+@import "./css/header.css";
+
 /* Search modal tweaks */
 @import "./css/search-modal.css";
 

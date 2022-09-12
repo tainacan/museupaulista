@@ -1,0 +1,22 @@
+header .ct-header-search.ct-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0px !important;
+    border-radius: 30px !important;
+    border: 1px solid var(--paletteColor1, #F57832) !important;
+}
+
+header nav ul.menu {
+    height: 72px;
+    border-top: 6px solid  var(--paletteColor3, #000000);
+    border-bottom: 1px solid var(--paletteColor1, #F57832);
+}
+
+header nav ul.menu .ct-menu-link {
+    height: auto;
+}
+
+header nav ul.menu>li:not(:first-child) .ct-menu-link {
+    border-left: 1px solid var(--paletteColor21, #e6e6e6);
+}
