@@ -76,3 +76,14 @@ function museupaulista_add_link_to_items_list() {
     }
 }
 add_action('blocksy:template:after', 'museupaulista_add_link_to_items_list');
+
+
+/**
+ * Allows upload of SVG files
+ */
+function museupaulista_upload_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	$mimes['svgz'] = 'application/x-gzip';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'museupaulista_upload_mime_types' );

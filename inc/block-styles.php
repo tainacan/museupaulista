@@ -49,6 +49,15 @@ if ( function_exists('register_block_style') ) {
             )
         );
 
+        register_block_style(
+            'tainacan/carousel-terms-list',
+            array(
+                'name'  => 'museupaulista-rounded',
+                'label' =>  __('Arredondado Museu Paulista', 'museupaulista'),
+                'isDefault' => false,
+            )
+        );
+
     }
     add_action('init', 'museupaulista_block_styles');
 }

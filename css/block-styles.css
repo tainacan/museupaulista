@@ -1,14 +1,14 @@
 /* Page title on editor side */
 .editor-post-title__block .editor-post-title__input {
     font-family: Arial, Sans-Serif !important;
-    font-size: 64px;
+    font-size: 4rem;
 }
 
 .wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-container a > span,
 .wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-container a:hover > span,
 .wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-container a > span,
 .wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-container a:hover > span {
-    font-size: 22px;
+    font-size: 1.375rem;
     color: var(--paletteColor1, #F57832);
 }
 
@@ -20,11 +20,6 @@
     display: none;
 }
 
-/* Home banner logo */
-.wp-block-getwid-section .wp-block-group__inner-container svg {
-    margin-bottom: -4rem !important;
-    display: block;
-}
 
 /* Inner content of cover blocks should be 100% even with the positioning set to custom */
 .wp-block-cover-image.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container,
@@ -99,44 +94,8 @@ div.is-style-outline > .wp-block-button__link {
     padding: .125em 5.9375em;
 }
 
-/* Cover images carousel with figcaption layer to darken it */
-.wp-block-getwid-images-slider.has-captions .wp-block-getwid-images-slider__item figcaption {
-    display: flex !important;
-    align-items: flex-end;
-    font-size: 22px;
-    font-weight: bold;
-    background-color: none; /*rgba(34,34,34,0.5); */
-    background-image: none;
-    padding: 20px;
-    height: 100%;
-}
-
 .is-style-museupaulista-text-shadow {
     text-shadow: -2px 2px 1px var(--paletteColor3, #111111); 
-}
-
-/* The posts and images gap should have more space to the arrows */
-.wp-block-getwid-post-carousel.has-slides-gap-large .slick-list,
-.wp-block-getwid-images-slider.has-slides-gap-large .slick-list {
-    margin: 0;
-}
-
-/* Museu Paulista Facets Section */
-.wp-block-getwid-section.museupaulista-facets-section hr {
-    margin-top: -18px;
-    height: 1px;
-}
-.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list {
-    margin: 0em auto 2em auto;
-}
-.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list .facets-list {    
-    margin-left: -10px;
-    margin-right: -10px;
-}
-.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list ul.facets-list.facets-layout-list li.facet-list-item .facet-label-and-count span:first-child,
-.wp-block-getwid-section.museupaulista-facets-section .wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list li.facet-list-item .facet-label-and-count span:first-child {
-    font-weight: bold;
-    color: var(--paletteColor1, #F57832);
 }
 
 /* Museu Paulista institution Pattern */
@@ -162,18 +121,6 @@ div.is-style-outline > .wp-block-button__link {
 .wp-block-image.is-style-museupaulista-item-image figcaption {
     text-align: left;
     --fontSize: 1rem;
-}
-
-/* Slick carousel arrows should be accent color */
-.wp-block-getwid-images-slider .slick-prev::before,
-.wp-block-getwid-images-slider .slick-next::before,
-.wp-block-getwid-media-text-slider .slick-prev::before,
-.wp-block-getwid-media-text-slider .slick-next::before,
-.wp-block-getwid-post-slider .slick-prev::before,
-.wp-block-getwid-post-slider .slick-next::before,
-.wp-block-getwid-post-carousel .slick-prev::before,
-.wp-block-getwid-post-carousel .slick-next::before {
-    color: var(--paletteColor1, #F57832);
 }
 
 /* Default outlined buttons should be really outline */
@@ -218,4 +165,19 @@ div.is-style-outline > .wp-block-button__link {
     left: -200%;
     top: 0;
     bottom: 0;
+}
+
+/* Tainacan term blocks rounded style */
+.wp-block-tainacan-carousel-terms-list.is-style-museupaulista-rounded a {
+    background-color: var(--paletteColor21, #e6e6e6);
+    border-radius: 170px;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wp-block-tainacan-carousel-terms-list.is-style-museupaulista-rounded a>img {
+    max-width: 40px;
+    margin-bottom: 26px;
 }

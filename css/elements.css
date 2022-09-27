@@ -26,29 +26,6 @@
     display: none;
 }
 
-/* GetWid Slick Carousel arrows */
-.slick-next::before,
-.slick-prev::before {
-    font-family: 'dashicons';
-    font-size: 30px;
-    color: var(--tainacan-block-primary, #F57832);
-}
-.slick-next::before {
-    content: '\f344';
-}
-.slick-prev::before {
-    content: '\f340'
-}
-.slick-arrow {
-    width: 42px;
-    height: 42px;
-}
-.slick-next.slick-disabled,
-.slick-prev.slick-disabled {
-    display: none;
-    visibility: hidden;
-}
-
 /* Puts the breadcrumb on top of the page */
 .hero-section {
     position: relative;
@@ -205,17 +182,7 @@ body.single-curadorias .hero-section .page-description {
 /* Tweaks for better responsivenes */
 @media screen and (max-width: 767px) {
     [data-header*="type-1"] .ct-header [data-id="logo"] .site-title {
-        --font-size: 34px;
-    }
-
-    .fs-mobile-50 .wp-block-getwid-advanced-heading__content,
-    .fs-mobile-50 .wp-block-getwid-countdown__content {
-        line-height: 90px !important;
-    }
-
-    .wp-block-getwid-post-carousel.has-slides-gap-large .slick-list,
-    .wp-block-getwid-images-slider.has-slides-gap-large .slick-list {
-        margin: 0 20px;
+        --font-size: 2.125rem;
     }
 
     .wp-block-columns.museupaulista-institution-cards>.wp-block-column>.wp-block-cover>.wp-block-cover__inner-container>.wp-block-columns {
@@ -236,9 +203,6 @@ body.single-curadorias .hero-section .page-description {
     .hero-section[data-type="type-2"] > [class*="ct-container"] {
         padding-left: 12px;
         padding-right: 12px;
-    }
-    .ct-newsletter-subscribe-widget {
-        padding: 24px 36px;
     }
     [data-vertical-spacing*="top"] .hero-section .ct-breadcrumbs {
         left: 2px;

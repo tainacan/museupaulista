@@ -3,12 +3,17 @@
     width: var(--container-width);
     max-width: var(--normal-container-max-width);
     padding-left: 0;
-    padding-right: 7px;
-    padding-top: 1.75rem;
+    padding-right: 10px;
+    padding-top: 3.125rem;
 }
 #search-modal .search-form {
     margin-bottom: 0;
     --form-field-border-focus-color: var(--palette-color-1, #F57832) !important;
+}
+#search-modal .ct-toggle-close {
+    border: 1px solid var(--palette-color-1, #F57832) !important;
+    padding: 0.8125rem !important;
+    border-radius: 100% !important;
 }
 #search-modal .museupaulista-search-modal-facets-list {
     margin: 0 auto auto auto;
