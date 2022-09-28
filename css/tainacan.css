@@ -230,3 +230,50 @@
     padding-top: 0;
     padding-bottom: 0;
 }
+
+/* Tainacan Facets list in the special page */
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-list,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list {
+    gap: 30px !important;
+}
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-list .facet-list-item.facet-without-image,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list .facet-list-item.facet-without-image {
+    box-shadow: -2px 2px var(--paletteColor3, #000000);
+    padding: 16px 16px 24px 16px;
+    margin-bottom: 30px;
+}
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-list .facet-list-item.facet-without-image .facet-label-and-count,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list .facet-list-item.facet-without-image .facet-label-and-count {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: ct_font_denso_sans, Sans-Serif;
+    text-transform: uppercase;
+}
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-list .facet-list-item.facet-without-image:hover .facet-label-and-count,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list .facet-list-item.facet-without-image:hover .facet-label-and-count {
+    color: var(--palette-color-1);
+}
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-list .facet-list-item.facet-without-image .facet-label-and-count .facet-item-count,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list .facet-list-item.facet-without-image .facet-label-and-count .facet-item-count {
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+    color: var(--paletteColor22, #666666);
+}
+.wp-block-tainacan-facets-list .show-more-button {
+    padding: 6px 25px !important;
+    height: auto !important;
+    width: auto !important;
+    color:  var(--palette-color-6, #ffffff);
+}
+.wp-block-tainacan-facets-list .show-more-button .icon {
+    display: none !important;
+}
+.wp-block-tainacan-facets-list .show-more-button:not(:hover) {
+    background-color: var(--paletteColor3, #000000);
+}
+.wp-block-tainacan-facets-list .show-more-button::before{
+    content: 'VER MAIS';
+    display: block;
+}

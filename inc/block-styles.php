@@ -31,12 +31,13 @@ if ( function_exists('register_block_style') ) {
             )
         );
 
+
         register_block_style(
-            'core/search',
+            'core/paragraph',
             array(
-                'name'  => 'museupaulista-search-bar',
-                'label' =>  __('Barra de Busca Museu Paulista', 'museupaulista'),
-                'isDefault' => true,
+                'name'  => 'museupaulista-title-font',
+                'label' =>  __('Fonte de título Museu Paulista', 'museupaulista'),
+                'isDefault' => false,
             )
         );
 

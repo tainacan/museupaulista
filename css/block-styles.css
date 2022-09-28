@@ -67,33 +67,6 @@ div.is-style-outline > .wp-block-button__link {
     border-color: white;
 }
 
-/* WordPress core Search Bar with Museu Paulista style */
-.wp-block-search.is-style-museupaulista-search-bar .wp-block-search__inside-wrapper {
-    border-radius: 8px;
-    padding: 0;
-    border: none;
-}
-.wp-block-search.is-style-museupaulista-search-bar .wp-block-search__inside-wrapper .wp-block-search__input {
-    background-color: white;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border: 1px solid var(--paletteColor3, #000000);
-    padding: 0 0 0 2.25em;
-    min-height: 48px;
-    margin-right: -3px;
-}
-.wp-block-search.is-style-museupaulista-search-bar .wp-block-search__inside-wrapper .wp-block-search__button {
-    margin-left: 0;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border: none;
-    background-color: var(--paletteColor1, #F57832);
-    color: white;
-    padding: .125em 5.9375em;
-}
-
 .is-style-museupaulista-text-shadow {
     text-shadow: -2px 2px 1px var(--paletteColor3, #111111); 
 }
@@ -172,7 +145,7 @@ div.is-style-outline > .wp-block-button__link {
     background-color: var(--paletteColor21, #e6e6e6);
     border-radius: 170px;
     padding: 34px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -180,4 +153,30 @@ div.is-style-outline > .wp-block-button__link {
 .wp-block-tainacan-carousel-terms-list.is-style-museupaulista-rounded a>img {
     max-width: 40px;
     margin-bottom: 26px;
+}
+
+/* Search block */
+.wp-block-search .wp-block-search__inside-wrapper {
+    border-left: none !important;
+    border-top: none !important;
+    border-right: none !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+} 
+.wp-block-search .wp-block-search__inside-wrapper:focus-within {
+    box-shadow: 0px 2px var(--paletteColor22, #666666);
+}
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button.has-icon {
+    background: transparent;
+    border: none !important;
+    color: var(--paletteColor5, #000000);
+    font-size: 1.5rem;
+    transform: rotateY(180deg);
+    padding-left: 0px !important;
+}
+
+/* Paragraph block style */
+p.is-style-museupaulista-title-font {
+    font-family: ct_font_denso_sans, Sans-Serif;
+    margin-bottom: calc(var(--has-content-spacing, 1)*(.3em + 10px));
 }

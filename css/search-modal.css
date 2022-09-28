@@ -10,6 +10,9 @@
     margin-bottom: 0;
     --form-field-border-focus-color: var(--palette-color-1, #F57832) !important;
 }
+#search-modal .search-form input {
+    --form-field-border-initial-color: var(--paletteColor22, #666666);
+}
 #search-modal .ct-toggle-close {
     border: 1px solid var(--palette-color-1, #F57832) !important;
     padding: 0.8125rem !important;
@@ -32,11 +35,15 @@
     font-size: 1.125rem;
     font-weight: normal;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
     margin: 4px 8px;
     display: block;
     cursor: pointer;
     outline: 0; 
+}
+#search-modal .museupaulista-search-modal-facets-list__header details[open=""] summary {
+    font-weight: bold;
+    box-shadow: 0 4px var(--paletteColor1, #F57832);
 }
 #search-modal .museupaulista-search-modal-facets-list__header details[open=""] summary svg {
     transform: rotateX(180deg);

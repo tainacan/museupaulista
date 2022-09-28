@@ -8,6 +8,12 @@
 #main>.ct-container:not(.ct-container-full) {
     border-top: 6px solid var(--paletteColor5);
 }
+.page-template-default:not(.home) #main>.ct-container-full:first-child {
+    padding-top: 6px;
+}
+.page-template-default:not(.home) #main>.ct-container-full:first-child>article {
+    padding-top: 54px;
+}
 
 /* Archive pages have less top padding */
 .archive .ct-container[data-vertical-spacing="top:bottom"] .hero-section,
