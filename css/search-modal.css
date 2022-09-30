@@ -95,6 +95,11 @@
 #search-modal .museupaulista-search-modal-facets-list__content .facets-view-all-button {
     margin: 1rem auto;
     column-span: all;
+    text-decoration: underline;
+    color: var(--palette-color-1);
+}
+#search-modal .museupaulista-search-modal-facets-list__content .facets-view-all-button:hover {
+    color: var(--palette-color-2);
 }
 #search-modal input {
     --form-font-size: 1.125rem;

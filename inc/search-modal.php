@@ -28,11 +28,24 @@ function museupaulista_add_facets_to_search_modal($form, $args) {
 		'meta_query' => [
 			[
 				'key'     => 'metadata_type',
-				'value'   => 'Tainacan\Metadata_Types\Taxonomy',
+				'value'   => 'Tainacan\Metadata_Types\Taxonomy'
 			]
 		]
 	];
     $metadata = $metadatum_repository->fetch_by_collection( $collection, $args );
+    $metadata = array_filter($metadata, function($metadatum) {
+        return in_array(
+            $metadatum->get_ID(),
+            [
+                23, // Denominação
+                226,// Descritor
+                37, // Autoria
+                30, // Autoria Atribuída
+                85  // Coleção
+            ]
+        );
+    });
+    
 
     if ( !$metadata || !count($metadata) )
         return;
