@@ -49,7 +49,15 @@ function setClickEventsOfSearchModalFacetsList() {
     }
 }
 
+/* Adds an ID to the search element in order to have a link to it */
+function addIdToSearchButton() {
+    const searchButton = document.getElementsByClassName('ct-header-search');
+    if (searchButton[0] && !searchButton[0].id)
+        searchButton[0].setAttribute('id', 'museu-paulista-search-button'); 
+}
+
 performWhenDocumentIsLoaded(() => {
     syncFacetsBlockWithSearchBar();
     setClickEventsOfSearchModalFacetsList();
+    addIdToSearchButton();
 });

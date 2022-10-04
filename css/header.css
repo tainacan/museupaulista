@@ -3,11 +3,13 @@
 }
 
 #header [data-row*="top"] .ct-button {
-    padding-left: 0px;
-    font-family: ct_font_denso_sans, Sans-Serif;
-    font-size: 1rem;
+    padding: .25em .75em;
+    font-size: 12px;
+    text-transform: none;
 }
-
+#header [data-row*="top"] .wp-block-a11y-buttons-a11y-button > a {
+    text-decoration: none;
+}
 #header [data-row*="top"] .wp-block-a11y-buttons-a11y-button:hover,
 #header [data-row*="top"] .wp-block-a11y-buttons-a11y-button:focus {
     border-radius: 2rem;
