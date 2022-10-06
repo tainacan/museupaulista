@@ -17,7 +17,7 @@
 }
 
 [data-header*="type-1"] .ct-header [data-id="logo"].site-branding {
-    --margin: 1.5rem 0px 6.25rem 0px !important;
+    --margin: 1.75rem 0px 6.25rem 0px !important;
 }
 
 .ct-header .ct-header-search.ct-toggle {
