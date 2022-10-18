@@ -3,7 +3,7 @@
 Theme Name: Museu Paulista
 Description: Museu Paulista - a child theme of Blocksy
 Author: wetah
-Version: 0.2.11
+Version: 0.3.7
 Text Domain: museupaulista
 */
 
@@ -12,7 +12,7 @@ if (! defined('WP_DEBUG')) {
 }
 
 /** Child Theme version */
-const MUSEU_PAULISTA_VERSION = '0.2.11';
+const MUSEU_PAULISTA_VERSION = '0.3.7';
 
 /* Enqueues necessary JS and CSS files */
 add_action( 'wp_enqueue_scripts', function () {

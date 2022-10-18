@@ -12,15 +12,6 @@
     color: var(--paletteColor1, #F57832);
 }
 
-/* Facet block is used for rounded images without title */
-.wp-block-tainacan-facets-list .facets-layout-grid .facet-list-item .facet-label-and-count {
-    align-items: center !important;
-}
-.wp-block-tainacan-facets-list .facets-layout-grid .facet-list-item .facet-label-and-count span:not(.facet-item-count) {
-    display: none;
-}
-
-
 /* Inner content of cover blocks should be 100% even with the positioning set to custom */
 .wp-block-cover-image.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container,
 .wp-block-cover.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container {
@@ -46,6 +37,16 @@
 .wp-block-cover .wp-block-tainacan-facets-list ul.facets-list.facets-layout-list li.facet-list-item a,
 .wp-block-cover .wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-list li.facet-list-item a {
     color: inherit !important;
+}
+
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-grid li.facet-list-item,
+.wp-block-tainacan-facets-list ul.facets-list-edit.facets-layout-grid li.facet-list-item {
+    box-shadow: -2px 2px 0px var(--paletteColor3, #000000);
+}
+
+.wp-block-tainacan-facets-list ul.facets-list.facets-layout-grid li.facet-list-item .facet-label-and-count.is-style-facet-label-and-count--below {
+    padding: 0.75rem 1.5rem;
+    line-height: 1.5;
 }
 
 /* Title inside the blocks should not have margin */
@@ -132,10 +133,10 @@ div.is-style-outline > .wp-block-button__link {
     position: absolute;
     background: inherit;
     z-index: 99999;
-    width: 200%;
+    width: 250%;
     height: 100%;
     right: 0;
-    left: -200%;
+    left: -250%;
     top: 0;
     bottom: 0;
 }
@@ -188,6 +189,12 @@ p.is-style-museupaulista-title-font {
     border-radius: 100%;
     border: 4px solid var(--paletteColor21, #e6e6e6);
     position: relative;
+}
+@media screen and (max-width: 782px) {
+    .wp-block-cb-slide > .wp-block-group {
+        width: 130px;
+        height: 130px;
+    }
 }
 .wp-block-cb-slide > .wp-block-group:hover,
 .wp-block-cb-slide > .wp-block-group:focus {

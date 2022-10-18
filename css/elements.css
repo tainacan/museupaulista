@@ -222,3 +222,53 @@ body.single-curadorias .hero-section .page-description {
         padding-right: 0;
     }
 }
+
+/* Helper classes while Appearance tools are not available in Blocksy */
+.mt-0 {
+    margin-top: 0px !important;
+}
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+.ml-0 {
+    margin-left: 0px !important;
+}
+.mr-0 {
+    margin-right: 0px !important;
+}
+@media screen and (max-width: 781px) {
+    .is-hidden-mobile { 
+        display: none;
+        visibility: hidden;
+    }   
+}
+@media screen and (min-width: 782px) {
+    .is-hidden-desktop { 
+        display: none;
+        visibility: hidden;
+    }   
+}
+
+/* Curadorias Archive has smalle inner area */
+body.archive.post-type-archive-curadorias[data-prefix="curadorias_archive"] .entries {
+    max-width: 83%;
+    margin: 0 auto;
+    gap: 80px;
+}
+
+/* Fixes underline not appearing on some links with strong inside a tag */
+a > strong,
+a > em {
+    --textDecoration: underline;
+    text-decoration: var(--has-link-decoration, var(--textDecoration, none));
+}
+
+/* Readable font mode could use smaller menu font size */
+html.a11y-buttons-readable-font-mode [data-header*="type-1"] .ct-header [data-id="menu"] > ul > li > a {
+    font-size: 1rem;
+}
+
+/* Custom posts inside a shortcut should not have shadow */
+.ct-posts-shortcode[data-prefix="curadorias_archive"] {
+    --box-shadow: none !important;
+}

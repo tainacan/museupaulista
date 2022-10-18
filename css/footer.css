@@ -2,3 +2,10 @@
 footer .ct-widget.widget_block .wp-block-group figure.wp-block-image:last-child {
     margin-bottom: auto;
 }
+
+/* Better spacing for the logos on mobile and tablet */
+@media screen and (max-width: 1024px) {
+    footer>[data-row="top"] .ct-widget .wp-block-group {
+        gap: 2.25em
+    }
+}

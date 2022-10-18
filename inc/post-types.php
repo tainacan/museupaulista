@@ -86,13 +86,6 @@ function museupaulista_curadoria_post_type_init() {
                 ]
             ],
             [
-                'core/heading',
-                [
-                    'placeholder' => __('Número de itens da Curadoria...', 'museupaulista'),
-                    'content' => '1234 ITENS'
-                ]
-            ],
-            [
                 'tainacan/dynamic-items-list',
                 [
                     'align' => 'wide',
@@ -168,8 +161,7 @@ function museupaulista_curadoria_post_type_init() {
                             ]
                         ]
                     ],
-                    'backgroundColor' => 'palette-color-1',
-                    'textColor' => 'palette-color-7'
+                    'backgroundColor' => 'palette-color-9',
                 ],
                 [
                     [
@@ -190,7 +182,6 @@ function museupaulista_curadoria_post_type_init() {
                                             ]
                                         ]
                                     ],
-                                    'textColor' => 'palette-color-7'
                                 ],
                                 [
                                     [
@@ -410,7 +401,118 @@ function museupaulista_curadoria_post_type_init() {
                         ]
                     ]
                 ]
-            ]    
+            ],
+            [
+                'core/spacer',
+                [
+                    'height' => '70px'
+                ]
+            ],
+            [
+                'core/separator',
+                [
+                    'align' => 'center',
+                    'className' => 'is-style-wide'
+                ]
+            ],
+            [
+                'core/columns',
+                [
+                    'backgroundColor' => 'palette-color-7'
+                ],
+                [
+                    [
+                        'core/column',
+                        [
+                            'width' => '270px'
+                        ],
+                        [
+                            [
+                                'core/heading',
+                                [
+                                    'textAlign' => 'right',
+                                    'content' => __( 'Para saber mais', 'museupaulista')
+                                ]
+                            ]
+                        ]
+                    ],
+                    [
+                        'core/column',
+                        [],
+                        [
+                            [
+                                'core/group',
+                                [],
+                                [
+                                    [
+                                        'core/paragraph',
+                                        [
+                                            'placeholder' => __( 'Coloque aqui referências bibliográficas usadas para construção dessa curadoria...', 'museupaulista')
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ],
+            [
+                'core/group',
+                [
+                    'backgroundColor' => 'palette-color-20'
+                ],
+                [
+                    [
+                        'core/paragraph',
+                        [
+                            'content' => '<strong>' . __( 'curadoria por:', 'museupaulista') . '</strong>',
+                            'textcolor' => 'palette-color-22'
+                        ],
+                    ],
+                    [
+                        'core/columns',
+                        [
+                            'style' => [
+                                'spacing' => [
+                                    'padding' => [
+                                        'top' => '0px',
+                                        'bottom' => '0px'
+                                    ]
+                                ]
+                            ]
+                        ],
+                        [
+                            [
+                                'core/column',
+                                [
+                                    'width' => '270px'
+                                ],
+                                [
+                                    [
+                                        'core/heading',
+                                        [
+                                            'textAlign' => 'right',
+                                            'placeholder' => __( 'Nome e Sobrenome do(a) Autor(a)', 'museupaulista')
+                                        ]
+                                    ]
+                                ]
+                            ],
+                            [
+                                'core/column',
+                                [],
+                                [
+                                    [
+                                        'core/paragraph',
+                                        [
+                                            'placeholder' => __( 'Conteúdo da mini biografia do autor ou autora...', 'museupaulista')
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ]
     );
     register_post_type( 'curadorias', $args );
