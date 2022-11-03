@@ -96,7 +96,7 @@ function museupaulista_filter_palette( $args ) {
 		array(
 			'name' => 'Escuro Museu Paulista',
 			'slug' => 'palette-color-19',
-			'color' => 'var(--paletteColor19, #333333'
+			'color' => 'var(--paletteColor19, #333333)'
 		),
 		array(
 			'name' => 'Claro Museu Paulista',

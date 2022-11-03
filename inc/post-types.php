@@ -187,7 +187,6 @@ function museupaulista_curadoria_post_type_init() {
                                     [
                                         'core/heading',
                                         [
-                                            'textColor' => 'palette-color-7',
                                             'placeholder' => __('Nome da subseção 1 da curadoria', 'museupaulista')
                                         ]
                                     ],

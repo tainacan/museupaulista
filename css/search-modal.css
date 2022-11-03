@@ -111,6 +111,9 @@
     --search-button-size: 70px;
     top: -8px;
 }
+#search-modal form button [data-loader] {
+    --loaderColor: var(--palette-color-1, #F57832);
+}
 
 @media screen and (max-width: 1440px) {
     #search-modal .museupaulista-search-modal-facets-list__content {

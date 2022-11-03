@@ -5,49 +5,54 @@
  * Updates search modal with a list of facets
  */
 function museupaulista_add_facets_to_search_modal($form, $args) {
-    $museupaulista_collection_id = null;
-
+    $museupaulista_collections_ids = [];
+    
     if ( $args && isset($args['ct_post_type']) ) {
         foreach( $args['ct_post_type'] as $post_type ) {
             if ( substr( $post_type, 0, 7 ) === "tnc_col" ) {
                 $museupaulista_collection_id = str_replace('tnc_col_', '', $post_type);
                 $museupaulista_collection_id = str_replace('_item', '', $museupaulista_collection_id);
-                break;
+                $museupaulista_collections_ids[] = $museupaulista_collection_id;
             }
         };
     }
-    //$museupaulista_collection_id = '130957';
-    if (!$museupaulista_collection_id)
+
+    if ( !count($museupaulista_collections_ids) )
         return;
-
     
-    $collection = new \Tainacan\Entities\Collection($museupaulista_collection_id);
-    
-    $metadatum_repository = \tainacan_metadata();
-    $args = [
-		'meta_query' => [
-			[
-				'key'     => 'metadata_type',
-				'value'   => 'Tainacan\Metadata_Types\Taxonomy'
-			]
-		]
-	];
-    $metadata = $metadatum_repository->fetch_by_collection( $collection, $args );
-    $metadata = array_filter($metadata, function($metadatum) {
-        return in_array(
-            $metadatum->get_ID(),
-            [
-                23, // Denominação
-                226,// Descritor
-                37, // Autoria
-                30, // Autoria Atribuída
-                85  // Coleção
+    $modal_metadata = [];
+    foreach( $museupaulista_collections_ids as $museupaulista_collection_id ) {
+        $collection = new \Tainacan\Entities\Collection($museupaulista_collection_id);
+        
+        $metadatum_repository = \tainacan_metadata();
+        $args = [
+            'meta_query' => [
+                [
+                    'key'     => 'metadata_type',
+                    'value'   => 'Tainacan\Metadata_Types\Taxonomy'
+                ]
             ]
-        );
-    });
-    
+        ];
+        $metadata = $metadatum_repository->fetch_by_collection( $collection, $args );
+        $metadata = array_filter($metadata, function($metadatum) {
+            return in_array(
+                $metadatum->get_ID(),
+                [
+                    23, // Denominação
+                    226,// Descritor
+                    37, // Autoria
+                    30, // Autoria Atribuída
+                    85  // Coleção
+                ]
+            );
+        });
 
-    if ( !$metadata || !count($metadata) )
+        foreach($metadata as $metadatum) {
+            $modal_metadata[] = $metadatum;
+        }
+    }
+
+    if ( !$modal_metadata || !count($modal_metadata) )
         return;
 
     ob_start();
@@ -56,9 +61,8 @@ function museupaulista_add_facets_to_search_modal($form, $args) {
         <div class="museupaulista-search-modal-facets-list">
             <div class="museupaulista-search-modal-facets-list__header">
                 <?php
-                foreach($metadata as $metadatum) {
+                foreach($modal_metadata as $metadatum) {
                     $args = [
-                        'collection_id' => $museupaulista_collection_id,
                         'number' => 12,
                         'count_items' => true
                     ];

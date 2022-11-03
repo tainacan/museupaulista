@@ -3,7 +3,7 @@
 Theme Name: Museu Paulista
 Description: Museu Paulista - a child theme of Blocksy
 Author: wetah
-Version: 0.3.7
+Version: 0.4.4
 Text Domain: museupaulista
 */
 
@@ -12,7 +12,7 @@ if (! defined('WP_DEBUG')) {
 }
 
 /** Child Theme version */
-const MUSEU_PAULISTA_VERSION = '0.3.7';
+const MUSEU_PAULISTA_VERSION = '0.4.4';
 
 /* Enqueues necessary JS and CSS files */
 add_action( 'wp_enqueue_scripts', function () {
@@ -29,12 +29,12 @@ function museupaulista_editor_side_enqueues() {
 add_action( 'enqueue_block_editor_assets', 'museupaulista_editor_side_enqueues');
 
 /* Theme special features */
-function museupaulista_theme_supported_features() {
-	add_theme_support( 'custom-units', 'px', 'rem', 'em', '%', 'vh', 'vw' );
-	add_theme_support( 'custom-spacing' );
-	add_theme_support( 'custom-line-height' );
-}
-add_action( 'after_setup_theme', 'museupaulista_theme_supported_features' );
+// function museupaulista_theme_supported_features() {
+// 	add_theme_support( 'custom-units', 'px', 'rem', 'em', '%', 'vh', 'vw' );
+// 	add_theme_support( 'custom-spacing' );
+// 	add_theme_support( 'custom-line-height' );
+// }
+// add_action( 'after_setup_theme', 'museupaulista_theme_supported_features' );
 
 
 // Updates to the search modal

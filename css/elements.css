@@ -258,6 +258,7 @@ body.archive.post-type-archive-curadorias[data-prefix="curadorias_archive"] .ent
 
 /* Fixes underline not appearing on some links with strong inside a tag */
 a > strong,
+a > mark,
 a > em {
     --textDecoration: underline;
     text-decoration: var(--has-link-decoration, var(--textDecoration, none));
