@@ -49,3 +49,7 @@
 .ct-header nav ul.menu>li:not(:first-child) .ct-menu-link {
     border-left: 1px solid var(--paletteColor21, #e6e6e6);
 }
+
+.ct-header nav ul.sub-menu li.menu-item.has-palette-color-9-color .ct-menu-link {
+    --linkInitialColor: var(--paletteColor9, #ffd791) !important;
+}

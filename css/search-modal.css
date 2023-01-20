@@ -112,7 +112,7 @@
     top: -8px;
 }
 #search-modal form button [data-loader] {
-    --loaderColor: var(--palette-color-1, #F57832);
+    --loaderColor: var(--palette-color-1, #F57832) !important;
 }
 
 @media screen and (max-width: 1440px) {

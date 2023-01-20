@@ -21,35 +21,32 @@ function museupaulista_add_facets_to_search_modal($form, $args) {
         return;
     
     $modal_metadata = [];
-    foreach( $museupaulista_collections_ids as $museupaulista_collection_id ) {
-        $collection = new \Tainacan\Entities\Collection($museupaulista_collection_id);
-        
-        $metadatum_repository = \tainacan_metadata();
-        $args = [
-            'meta_query' => [
-                [
-                    'key'     => 'metadata_type',
-                    'value'   => 'Tainacan\Metadata_Types\Taxonomy'
-                ]
-            ]
-        ];
-        $metadata = $metadatum_repository->fetch_by_collection( $collection, $args );
-        $metadata = array_filter($metadata, function($metadatum) {
-            return in_array(
-                $metadatum->get_ID(),
-                [
-                    23, // Denominação
-                    226,// Descritor
-                    37, // Autoria
-                    30, // Autoria Atribuída
-                    85  // Coleção
-                ]
-            );
-        });
 
-        foreach($metadata as $metadatum) {
-            $modal_metadata[] = $metadatum;
-        }
+    $metadatum_repository = \tainacan_metadata();
+    $args = [
+        'meta_query' => [
+            [
+                'key'     => 'metadata_type',
+                'value'   => 'Tainacan\Metadata_Types\Taxonomy'
+            ]
+        ]
+    ];
+    $metadata = $metadatum_repository->fetch( $args );
+    $metadata = array_filter($metadata, function($metadatum) {
+        return in_array(
+            $metadatum->get_ID(),
+            [
+                23, // Denominação
+                226,// Descritor
+                37, // Autoria
+                30, // Autoria Atribuída
+                85  // Coleção
+            ]
+        );
+    });
+
+    foreach($metadata as $metadatum) {
+        $modal_metadata[] = $metadatum;
     }
 
     if ( !$modal_metadata || !count($modal_metadata) )

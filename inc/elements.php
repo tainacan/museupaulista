@@ -16,14 +16,15 @@ function museupaulista_add_share_and_back_buttons($type) {
                 <i class="tainacan-icon tainacan-icon-share"></i>
             </span>
             <div class="museupaulista-social-icons">
-                <?php echo blocksy_get_social_share_box(); ?>
+                <?php echo blocksy_get_social_share_box([
+				    'prefix' => 'single_blog_post'
+			    ]); ?>
             </div>
         </button>
     </div>
     <?php
 }
 add_action('blocksy:hero:before', 'museupaulista_add_share_and_back_buttons');
-
 
 /**
  * Adds Institution label bellow item Title
