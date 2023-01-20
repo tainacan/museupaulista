@@ -31,7 +31,7 @@ function museupaulista_add_facets_to_search_modal($form, $args) {
             ]
         ]
     ];
-    $metadata = $metadatum_repository->fetch( $args );
+    $metadata = $metadatum_repository->fetch( $args, 'OBJECT' );
     $metadata = array_filter($metadata, function($metadatum) {
         return in_array(
             $metadatum->get_ID(),
