@@ -63,8 +63,45 @@ function addIdToSearchButton() {
         searchButton[0].setAttribute('id', 'museu-paulista-search-button'); 
 }
 
+function addTaxonomiesToSearchModal() {
+    if ( ctEvents ) {
+        ctEvents.on('ct:modal:opened', ($element) => {
+            if ($element && $element.id === 'search-modal') {
+                
+                const modalTaxonomies = $element.querySelector('.museupaulista-search-modal-facets-list');
+                if (!modalTaxonomies) {
+
+                    const modalForm = $element.querySelector('.search-form');
+
+                    if ( modalForm ) {
+                        modalForm.outerHTML += `<div class="loading-modal-taxonomy">
+                            <svg class="spinner" viewBox="0 0 50 50">
+                                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                            </svg>
+                        </div>`; 
+                        fetch('/wp-admin/admin-ajax.php?action=get_modal_value', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
+                        })
+                        .then(response => response.text())
+                        .then(data => {
+                            const loadingStateIndicator = $element.querySelector('.loading-modal-taxonomy');
+                            loadingStateIndicator.remove();
+
+                            const modalForm = $element.querySelector('.search-form');
+                            modalForm.outerHTML += data;
+                        });
+                    }
+                }
+                
+            }
+        });
+    }
+}
+
 performWhenDocumentIsLoaded(() => {
     syncFacetsBlockWithSearchBar();
     setClickEventsOfSearchModalFacetsList();
     addIdToSearchButton();
+    addTaxonomiesToSearchModal();
 });
