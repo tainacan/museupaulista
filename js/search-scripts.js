@@ -90,6 +90,8 @@ function addTaxonomiesToSearchModal() {
 
                             const modalForm = $element.querySelector('.search-form');
                             modalForm.outerHTML += data;
+
+                            setClickEventsOfSearchModalFacetsList();
                         });
                     }
                 }
@@ -101,7 +103,6 @@ function addTaxonomiesToSearchModal() {
 
 performWhenDocumentIsLoaded(() => {
     syncFacetsBlockWithSearchBar();
-    setClickEventsOfSearchModalFacetsList();
     addIdToSearchButton();
     addTaxonomiesToSearchModal();
 });

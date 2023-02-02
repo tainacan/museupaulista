@@ -67,7 +67,7 @@ function get_modal_value() {
                                 if ( isset($facets['total']) && $facets['total'] > 12 ): ?>
                                     <a 
                                             class="facets-view-all-button"
-                                            href="<?php echo '/inventario#' . $metadatum->get_slug(); ?>">
+                                            href="<?php echo '/acervo-digital#' . $metadatum->get_slug(); ?>">
                                         <?php printf(
                                                 /* translators: %s: Name of a city */
                                                 __( 'Ver todas as %s facetas.', 'museupaulista' ),
